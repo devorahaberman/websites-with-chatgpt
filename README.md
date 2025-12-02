@@ -1,4 +1,4 @@
-# Build a Website with ChatGPT — Project Portfolio
+# Build a Website with ChatGPT - Project Portfolio
 
 Welcome to my repository! 🎉  
 This repo contains all the projects I’ve built while following the assignments in the book **_Build a Website with ChatGPT_**. Each project represents a step in my journey of learning, experimenting, and applying modern web development practices with the support of AI.
