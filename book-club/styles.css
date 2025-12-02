@@ -1,0 +1,114 @@
+/* Overall page layout */
+body {
+  margin: 0;
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: column; /* stack header / main / footer vertically */
+  align-items: center;    /* center those elements horizontally */
+  justify-content: flex-start;
+  min-height: 100vh;
+  font-family: Georgia, serif; /* Body serif */
+}
+
+main, header, footer {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  background-color: teal;
+  padding: 20px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center; /* center header content horizontally */
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+}
+
+header h1 {
+  font-size: 48px;
+  color: white;
+  font-family: "Times New Roman", serif;
+  margin: 0;
+}
+
+header h2 {
+  font-size: 24px;
+  color: white;
+  font-family: "Times New Roman", serif;
+  margin-top: 5px;
+}
+
+/* Headings */
+h2 {
+  font-size: 36px;
+  color: whitesmoke;
+  font-family: "Times New Roman", serif;
+}
+
+h3 {
+  font-family: "Times New Roman", serif;
+}
+
+/* Body text */
+p, li {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Current Book Section Layout */
+.book-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.book-cover {
+  width: 200px;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer a {
+  color: teal;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 32px;
+  }
+
+  header h2 {
+    font-size: 18px;
+  }
+
+  .book-info {
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 60px;
+  }
+}
