@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Pun Generator</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f7f7f7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    #pun-display {
+      background: white;
+      padding: 20px;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      font-size: 1.2rem;
+      text-align: center;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      background: #0077ff;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background .2s;
+    }
+
+    button:hover {
+      background: #005fd1;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Random Pun Generator</h1>
+
+  <div id="pun-display">Click the button for a pun!</div>
+
+  <button id="pun-btn">Give Me a Pun</button>
+
+  <script>
+    const puns = [
+      "I’m reading a book on anti-gravity. It’s impossible to put down!",
+      "I used to play piano by ear, but now I use my hands.",
+      "I stayed up all night wondering where the sun went. Then it dawned on me.",
+      "I’m on a seafood diet. I see food and I eat it.",
+      "A boiled egg in the morning is hard to beat.",
+      "Did you hear about the restaurant on the moon? Great food, no atmosphere.",
+      "I don’t trust stairs—they’re always up to something.",
+      "I wondered why the baseball was getting bigger… then it hit me.",
+      "I used to be addicted to soap, but I’m clean now.",
+      "I’m reading a book on glue—can’t put it down.",
+      "What do you call fake spaghetti? An impasta!",
+      "I’d tell you a construction joke, but I’m still working on it.",
+      "The rotation of Earth really makes my day.",
+      "I once heard a joke about amnesia, but I forgot how it goes.",
+      "What do you call cheese that isn’t yours? Nacho cheese!",
+      "My dog ate my homework. I guess it was a little ruff.",
+      "I used to be a baker, but I couldn’t make enough dough.",
+      "The shovel was a groundbreaking invention.",
+      "I once got fired from a calendar factory. All I did was take a day off.",
+      "I got hit in the head with a can of soda. Luckily, it was a soft drink.",
+      "I’m friends with all electricians—we have good current connections.",
+      "I’d tell you a joke about time travel, but you didn’t like it.",
+      "Becoming a vegetarian is a big missed steak.",
+      "Haunted French pancakes give me the crêpes.",
+      "I was going to buy a camouflage jacket, but I couldn’t find one.",
+      "The man who survived pepper spray and mustard gas is now a seasoned veteran.",
+      "I used to hate facial hair, but then it grew on me.",
+      "I once worked at an orange juice factory, but I got canned. I couldn’t concentrate.",
+      "I’m no photographer, but I can picture us together.",
+      "Claustrophobic astronauts need a little space.",
+      "I gave all my dead batteries away—free of charge.",
+      "Never trust an atom; they make up everything.",
+      "I had a joke about chemistry, but there was no reaction.",
+      "My math teachers have too many problems.",
+      "Bees have sticky hair because they use honeycombs.",
+      "I don’t trust those trees—they seem kind of shady.",
+      "I tried to catch fog yesterday. Mist.",
+      "Why did the scarecrow win an award? He was outstanding in his field.",
+      "I cut my finger chopping cheese. It was a grater injury.",
+      "What do you get from a pampered cow? Spoiled milk.",
+      "A bicycle can’t stand by itself—it’s two-tired.",
+      "What do you call a belt made of watches? A waist of time.",
+      "I stayed at a bakery overnight because I kneaded the dough.",
+      "I got a job at a bakery because I kneaded dough.",
+      "I used to be a banker but I lost interest.",
+      "I once swallowed food coloring. I feel like I dyed a little inside.",
+      "Those who get too big for their britches will be exposed in the end.",
+      "I bought shoes from a drug dealer. I don’t know what he laced them with, but I’ve been tripping all day.",
+      "The guy who invented Lifesavers made a mint."
+    ];
+
+    const display = document.getElementById('pun-display');
+    const button = document.getElementById('pun-btn');
+
+    button.addEventListener('click', () => {
+      const randomIndex = Math.floor(Math.random() * puns.length);
+      display.textContent = puns[randomIndex];
+    });
+  </script>
+</body>
+</html>
