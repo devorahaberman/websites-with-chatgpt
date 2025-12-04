@@ -1,0 +1,89 @@
+/* Base layout */
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    color: midnightblue;
+    font-family: 'Times New Roman', serif;
+    padding: 20px;
+}
+
+/* Header */
+header h1 {
+    font-size: 42px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.tagline {
+    font-size: 30px;
+    font-style: italic;
+    margin-top: 0;
+    text-align: center;
+}
+
+/* Navigation */
+nav {
+    border-top: 2px solid midnightblue;
+    border-bottom: 2px solid midnightblue;
+    padding: 10px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+nav a {
+    font-size: 24px;
+    color: midnightblue;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+/* Section headings */
+h2 {
+    font-size: 42px;
+    font-family: 'Playfair Display', serif;
+    color: midnightblue;
+    margin-top: 40px;
+}
+
+h3 {
+    font-size: 28px;
+    font-family: 'Playfair Display', serif;
+    color: midnightblue;
+}
+
+/* Paragraph text */
+main p,
+ul {
+    font-size: 20px;
+}
+
+/* Back to top link */
+.top-link {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 10px 0;
+    border-top: 2px solid midnightblue;
+}
+
+/* Social block (special instructions) */
+.social-block {
+    border-top: 2px solid midnightblue;
+    border-bottom: 2px solid midnightblue;
+    margin-top: 50px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.social-block a {
+    color: midnightblue;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 22px;
+}
