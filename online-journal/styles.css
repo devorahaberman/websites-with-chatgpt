@@ -1,0 +1,186 @@
+/* Colors */
+:root{
+  --sage-bg: #9CAF88;      /* page background (sage) */
+  --text-black: #000000;   /* black for main text */
+  --pale-green: #e6f2e7;   /* pale green for accordion background */
+  --date-green: #0B6623;   /* dark green for dates */
+  --forest-green: #228B22; /* forest green for outlines */
+  --max-width: 850px;
+}
+
+/* Page basics */
+html, body {
+  height: 100%;
+  margin: 0;
+  background: var(--sage-bg);
+  color: var(--text-slate);
+  font-family: 'Chewy', serif; /* body font as requested */
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body > * {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Centered page container */
+header, main, footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Header layout */
+.site-header {
+  overflow: auto; /* contain floated image */
+  display: block;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.logo {
+  max-width: 150px;
+  height: auto;
+  margin: 0 auto 12px auto;
+  display: block;
+  background: white;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+/* Title and tagline */
+.header-text h1 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 48px;
+  margin: 6px 0 0 0;
+  color: var(--text-slate);
+}
+
+.header-text .tagline {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 22px;
+  margin: 4px 0 0 0;
+  font-style: italic;
+  color: var(--text-slate);
+}
+
+/* Main / entries */
+main {
+  margin-top: 48px; /* as requested */
+  font-size: 20px;  /* main section font size */
+  flex-grow: 1;
+}
+
+/* Summary styling (acts as accordion header) */
+details summary {
+  list-style: none;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Fredoka', sans-serif; /* headings & summary use Fredoka */
+  font-size: 30px;
+  padding: 14px 18px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.02);
+  margin-bottom: 8px;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.03);
+}
+
+/* Remove default triangle in some browsers */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Add a custom marker (cheeky paw) */
+details summary::before {
+  content: "🐾 ";
+  margin-right: 8px;
+}
+
+/* Hover + open states for summary */
+details[open] summary {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Forest green outline for accordion items */
+details {
+  border: 3px solid var(--forest-green);
+  border-radius: 8px;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+/* Entry body (visible when accordion opened) */
+details .entry-body {
+  background: var(--pale-green);  /* pale green background for accordion content */
+  border-radius: 0 0 5px 5px;
+  padding: 14px 18px;
+  margin: 0;
+  color: var(--text-slate);
+  line-height: 1.6;
+  font-family: 'Chewy', serif; /* body text font */
+}
+
+/* Date styling */
+.entry-date {
+  color: var(--date-green);
+  font-size: 18px;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+/* Make sure lists inside entries inherit body font size */
+.entry-body ul, .entry-body ol {
+  margin-top: 8px;
+  padding-left: 1.2rem;
+  font-size: 20px;
+}
+
+/* Footer */
+footer {
+  padding: 5px;       /* 5px padding all around */
+  margin-top: 10px;   /* 10px top margin */
+  text-align: center;
+  color: var(--text-slate);
+  font-family: 'Chewy', serif;
+}
+
+/* Responsiveness */
+@media (max-width: 820px) {
+  .logo {
+    float: none;
+    display: block;
+    margin: 0 auto 12px auto;
+  }
+
+  .header-text h1 {
+    text-align: center;
+  }
+
+  .header-text .tagline {
+    text-align: center;
+  }
+
+  details summary {
+    font-size: 26px;
+    padding: 12px 14px;
+  }
+
+  main {
+    font-size: 18px;
+    margin-top: 32px;
+  }
+}
+
+/* small accessibility nicety: focus styles for keyboard users */
+details summary:focus {
+  box-shadow: 0 0 0 4px rgba(106, 153, 84, 0.18);
+  border-radius: 8px;
+}
